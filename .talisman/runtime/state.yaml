@@ -1,0 +1,12 @@
+version: 1
+project_status: implementation
+focus:
+  - task01 三个 MuJoCo CPU 基础场景与可复现数据导出
+active_tasks:
+  - benchmark.cpu_baseline
+blocked_tasks: []
+next_actions:
+  - 实现并运行基础场景、重复实验和步长对照
+  - 回写验收结果及后续多引擎接入边界
+last_updated_by: codex
+last_updated_at: 2026-10-08T06:08:19.868681+00:00
