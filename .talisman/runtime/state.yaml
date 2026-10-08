@@ -1,12 +1,13 @@
 version: 1
-project_status: implementation
+project_status: planning
 focus:
-  - task01 三个 MuJoCo CPU 基础场景与可复现数据导出
-active_tasks:
-  - benchmark.cpu_baseline
+  - 当前聚焦四十个可迁移 AI 技巧教学题，历史一百二十个应用题保留为备选
+active_tasks: []
 blocked_tasks: []
 next_actions:
-  - 实现并运行基础场景、重复实验和步长对照
-  - 回写验收结果及后续多引擎接入边界
+  - 从 task02 的 121～160 题中选一个，用已有工具做最小对照实验
+  - 保存输入、提示词、前后结果及核对记录
+  - 套固定模板，测量首篇图文或录屏内容的制作时间
+  - 完成三个小实验后判断制作成本，再扩展系列
 last_updated_by: codex
-last_updated_at: 2026-10-08T06:08:19.868681+00:00
+last_updated_at: 2026-10-08

@@ -1,40 +1,39 @@
 version: 1
 project:
-  id: physics-engine-benchmark
-  name: 机器人仿真物理引擎对比
+  id: skill2post
+  name: Skill2Post
 tasks:
-  - id: benchmark.cpu_baseline
-    title: task01 三个 MuJoCo CPU 基础实验
-    kind: code
-    owner_role: developer
-    status: ready
-    risk: low
-    depends_on: []
-    inputs:
-      - .talisman/dev_docs/2026-10/task01_我做这个实验对比.md
-    outputs:
-      - src/physics_benchmark/
-      - configs/baseline.json
-      - docs/benchmark.md
-    acceptance:
-      - 三个场景各两种步长且每组独立重复三次
-      - 导出原始状态、力、冲量、导入参数和软硬件版本
-      - 动量平衡和铰链独立 ODE 参考校验通过
-      - 曲线、指标、失败记录和使用说明可用
-  - id: example.task.bootstrap
-    title: 初始化项目控制面
+  - id: project.positioning
+    title: task01 梳理项目定位
     kind: docs
-    owner_role: architect-agent
-    status: ready
+    owner_role: product-agent
+    status: complete
     risk: low
     depends_on: []
     inputs:
-      - .talisman/docs/PRD.md
-      - .talisman/docs/ARCH.md
+      - .talisman/dev_docs/2026-10/task01_思考怎么用ai学习各种ai技能出小红书教程.md
+      - .talisman/dev_docs/2026-10/task01_梳理项目定位.md
     outputs:
-      - .talisman/spec/tasks.yaml
-      - .talisman/runtime/state.yaml
+      - docs/PROJECT_POSITIONING.md
+      - README.md
     acceptance:
-      - 最小模板已填充
-      - 允许修改目录已定义
-      - 首批任务可进入执行
+      - 明确一句话定位和核心目标用户
+      - 明确内容与工具两条主线的关系
+      - 明确首阶段范围、非目标和成功指标
+      - README 能让首次访问者快速理解项目
+  - id: content.first_series
+    title: 规划首批 7 个同系列 AI 实战案例
+    kind: content
+    owner_role: content-agent
+    status: ready
+    risk: low
+    depends_on:
+      - project.positioning
+    inputs:
+      - docs/PROJECT_POSITIONING.md
+    outputs:
+      - docs/FIRST_SERIES_PLAN.md
+    acceptance:
+      - 7 个案例服务同一类核心用户
+      - 每个案例有明确问题、最终产物和复现价值
+      - 定义统一记录模板和反馈指标
